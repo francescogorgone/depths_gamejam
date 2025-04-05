@@ -18,6 +18,7 @@ public class Spawner : MonoBehaviour
     private float lastSpawnTime;
     private float currentSpawnTimer;
     private float[] probabilities; 
+    private float IncSpawn=0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class Spawner : MonoBehaviour
         }
 
         lastSpawnTime = 0;
-        currentSpawnTimer = spawnTime + UnityEngine.Random.Range(-10.0f,10.0f);
+        currentSpawnTimer = spawnTime + IncSpawn;
     }
 
     // Update is called once per frame
@@ -48,7 +49,7 @@ public class Spawner : MonoBehaviour
             Vector3 spawnPoint = new Vector3(spawnX,spawnY,spawnZ);
 
             // Determine which object to spawn
-            float spawnRandom = UnityEngine.Random.Range(0.0f,1.0f);
+            float spawnRandom = UnityEngine.Random.Range(0.0f,2.0f);
             int index = 0;
             while(index<probabilities.Length && spawnRandom > probabilities[index]){
                 ++index;
@@ -61,6 +62,7 @@ public class Spawner : MonoBehaviour
                 Debug.Log("Spawner: Probability out of range");
             }
 
+            IncSpawn ++;
             lastSpawnTime = 0;
             currentSpawnTimer = spawnTime + UnityEngine.Random.Range(-1.0f,1.0f);
         }
