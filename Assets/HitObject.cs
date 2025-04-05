@@ -6,11 +6,10 @@ public class HitObject : MonoBehaviour
     public static int score = 0;
 
     // Metodo che viene chiamato quando l'oggetto entra in collisione con un altro
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        // Puoi aggiungere un controllo per verificare che la collisione avvenga con un oggetto specifico
-        // Ad esempio, se l'oggetto con cui collidi è un proiettile, o se ha un tag specifico:
-        if (collision.gameObject.CompareTag("Player"))
+        // Puoi aggiungere un controllo per verificare che la collisione avvenga con un oggetto specifico tag: Player
+        if (other.CompareTag("Player"))
         {
             // Incrementa il punteggio
             score+= 100;
