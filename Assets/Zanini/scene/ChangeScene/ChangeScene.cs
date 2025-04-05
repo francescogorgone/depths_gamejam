@@ -15,8 +15,8 @@ public class ChangeScene : MonoBehaviour
         
     }
 
-    public void CambiaScena()
+    public void CambiaScena(int numeroscena)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(numeroscena);
     }
 }
