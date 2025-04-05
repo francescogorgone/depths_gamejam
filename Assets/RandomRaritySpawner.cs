@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
 
             IncSpawn ++;
             lastSpawnTime = 0;
-            currentSpawnTimer = spawnTime + UnityEngine.Random.Range(-1.0f,1.0f);
+            currentSpawnTimer = spawnTime + IncSpawn;
         }
         
     }
