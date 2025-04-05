@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour {
+public class PlayerControllerRigidBody : MonoBehaviour { //changed the class from PlayerController to PlayerControllerRigidBody
+// cause of concliftcs with the PlayerController class in the PlayerControllerAdvanced.cs file
 
     [Header("Movement")]
     [SerializeField] private float speed = 5f;
