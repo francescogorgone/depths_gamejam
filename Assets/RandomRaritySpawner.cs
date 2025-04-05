@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
 
         if(lastSpawnTime > currentSpawnTimer){
 
-            float spawnX = UnityEngine.Random.Range(-20.0f,20.0f);
+            float spawnX = UnityEngine.Random.Range(-20.0f,-10.0f);
             float spawnY = 0.98f;
             float spawnZ = UnityEngine.Random.Range(-20.0f,20.0f);
             Vector3 spawnPoint = new Vector3(spawnX,spawnY,spawnZ);
