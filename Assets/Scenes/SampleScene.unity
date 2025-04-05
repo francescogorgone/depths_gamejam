@@ -477,7 +477,7 @@ PrefabInstance:
     - target: {fileID: -8215470366046731223, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a9540246b7f9f4f06952fdb5c5874ec2, type: 2}
+      objectReference: {fileID: 2100000, guid: 6d26968330dc046388bd05be603e854b, type: 2}
     - target: {fileID: 919132149155446097, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
       propertyPath: m_Name
       value: Disperazione
@@ -487,9 +487,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a9540246b7f9f4f06952fdb5c5874ec2, type: 2}
     - target: {fileID: 9194509242015492025, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: abe7ae1bd71ca4f06828e439a4b8f436, type: 2}
+    - target: {fileID: 9194509242015492025, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 18fede813e15d4f2da8e6d41ad154a86, type: 2}
+      objectReference: {fileID: 2100000, guid: cbe4cb175d0cf49f8b5a10d58e1a5194, type: 2}
+    - target: {fileID: 9194509242015492025, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 91ba2dfc0f0da4499ade2676f1b621c1, type: 2}
+    - target: {fileID: 9194509242015492025, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 75034b0a0b1e948179bdfd5a50ccc03e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8391222552659086748, guid: 3f1eb3bfc2a4c49fda336f881f77ad4b, type: 3}
