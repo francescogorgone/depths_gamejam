@@ -26,7 +26,6 @@ public class MoveCharacter : MonoBehaviour
         Vector3 targetVelocity = new Vector3(moveInput.x, 0, moveInput.y) * moveSpeed;
         velocity = Vector3.Lerp(velocity, targetVelocity, rotationSpeed * Time.deltaTime);
         transform.position += velocity * Time.deltaTime;
-        Debug.Log(velocity*Time.deltaTime);
 
         // Simple rotation
         //if (movement != Vector3.zero)
