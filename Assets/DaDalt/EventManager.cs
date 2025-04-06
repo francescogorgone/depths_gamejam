@@ -19,7 +19,7 @@ public class EventManager : MonoBehaviour
     public float speed = 0f;
     public float maxSpeed = 100f;
 
-    public int points = 0;
+    public int points = 10;
     public float weight = 30f;
     public Image targetImage2;
 
