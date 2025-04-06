@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    private EventManager updatePoints;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        updatePoints = FindAnyObjectByType<EventManager>();
     }
 
     // Update is called once per frame
@@ -17,6 +18,14 @@ public class ChangeScene : MonoBehaviour
 
     public void CambiaScena(int numeroscena)
     {
+        if (numeroscena == 5)
+            {
+                SceneManager.LoadScene(numeroscena);
+            }
+
+        else {
+            updatePoints.points = 0;
         SceneManager.LoadScene(numeroscena);
+        }
     }
 }
