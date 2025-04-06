@@ -5,38 +5,29 @@ public class pointHUD : MonoBehaviour
 {
     [SerializeField] Text pointText;
     
+    public int points2 = 1234567890;
+    public EventManager eventManager;
 
-    private void Awake (){
+
+    private void Start (){
+        eventManager = FindObjectOfType<EventManager>();
+        if (eventManager == null) {
+            Debug.LogError("EventManager not found in the scene.");
+        }
+        points2 = eventManager.points;
         UpdateHud();
     }
 
-     int points = 1234567890;
-    public GameObject EventManager;
-    //private eventManager pippo;
-
-    public int score = 0;
-            private void Start()
-        {
-         
-        }
-          private void Update()
-        {
-            
-        }
-
-
-   
-
     public int Points {
-        get { return points; }
+        get { return points2; }
         set {
-            points = value;
+            points2 = eventManager.points;
             UpdateHud();
         }
     }
 
     private void UpdateHud() {
-        pointText.text = points.ToString();
+        pointText.text = points2.ToString();
     }
 
 }

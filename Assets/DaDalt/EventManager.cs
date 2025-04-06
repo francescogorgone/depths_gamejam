@@ -24,51 +24,66 @@ public class EventManager : MonoBehaviour
     public int points = 10;
     public float weight = 30f;
     public Image targetImage2;
+
+
+        //Oggetto permanente
+        public static EventManager Instance;
+
+        void Awake(){
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
     private void Start()
     {
         changeScene = GetComponent<ChangeScene>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
        
-       if (GameOn)
-        {
+       if (GameOn){
+            if ((AirSlider == null) || (SpeedSlider == null)){
+                 
+            }
+             else {
             
-       AirSlider.value = air;
-       SpeedSlider.value = speed;
-       speed = points / weight;
+                     AirSlider.value = air;
+                      SpeedSlider.value = speed;
+                       speed = points / weight;
 
-        if (air > 0)
-        {
-            targetImage.color = Color.Lerp(Color.cyan, Color.white, air);
-            air -= Time.deltaTime * drainSpeed;
-        }
+                        if (air > 0)
+                     {
+                            targetImage.color = Color.Lerp(Color.cyan, Color.white, air);
+                            air -= Time.deltaTime * drainSpeed;
+                        }
 
-        if (air <= 0)
-        {
-            Debug.Log("Game Over");
-            GameOn = false;
-            SceneManager.LoadScene(1);
-        }
-        if (air > maxAir)
-        {
-            air = maxAir;
-        }
+                       if (air <= 0)
+                   {
+                            Debug.Log("Game Over");
+                            GameOn = false;
+                            SceneManager.LoadScene(1);
+                       }
+                     if (air > maxAir)
+                        {
+                            air = maxAir;
+                        }
 
 
-        if (speed > maxSpeed)
-        {
-            speed = maxSpeed;
-        }
+                        if (speed > maxSpeed)
+                        {
+                            speed = maxSpeed;
+                        }
 
-        if (speed > 0)
-        {
-            targetImage2.color = Color.Lerp(Color.yellow, Color.red, speed);
-        }
-        }
-
+                       if (speed > 0)
+                        {
+                          targetImage2.color = Color.Lerp(Color.yellow, Color.red, speed);
+                       }
+                  }
+             }
         
     }
     public void IncreaseAir(float value)
