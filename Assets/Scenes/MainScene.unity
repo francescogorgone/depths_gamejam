@@ -242,6 +242,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.20876133
       objectReference: {fileID: 0}
@@ -280,6 +292,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 057c6361029f841ba8374630211f7ca6, type: 3}
       propertyPath: m_Name
@@ -672,7 +688,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: cave (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2290214213945943494, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1169490620114418061, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
     - {fileID: 4253367463770927028, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
@@ -707,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e15a7f7351470f93a7dd91122253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedObject: 7
+  speedObject: 2
   leftBound: 15
   uplimit: {fileID: 1625118103}
   spawnPoint: {fileID: 405762076}
@@ -2704,7 +2721,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: cave (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2290214213945943494, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1169490620114418061, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
     - {fileID: 4253367463770927028, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
@@ -2774,7 +2792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e15a7f7351470f93a7dd91122253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedObject: 7
+  speedObject: 2
   leftBound: 15
   uplimit: {fileID: 1625118103}
   spawnPoint: {fileID: 405762076}
@@ -3306,14 +3324,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e797416d15252944a8a209dcf69c48c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   sprintMultiplier: 2
   acceleration: 50
   rotationSpeed: 500
-  allowJump: 1
+  allowJump: 0
   jumpPower: 4
   maxNumberOfJumps: 2
-  gravityMultiplier: 1.7
+  gravityMultiplier: 0
   currentSpeed: 0
   isSprinting: 0
 --- !u!143 &2024240495
@@ -3336,8 +3354,8 @@ CharacterController:
   serializedVersion: 3
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 0.01
+  m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.97, z: 0}
@@ -3627,7 +3645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e15a7f7351470f93a7dd91122253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedObject: 7
+  speedObject: 2
   leftBound: 15
   uplimit: {fileID: 1625118103}
   spawnPoint: {fileID: 405762076}
@@ -3718,7 +3736,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: cave
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2290214213945943494, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1169490620114418061, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}
     - {fileID: 4253367463770927028, guid: 2b6bf60ea5ff44dbab165f2a9bfd0eff, type: 3}

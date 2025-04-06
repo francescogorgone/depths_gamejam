@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3622291075033949498}
   - component: {fileID: -4876260191103543702}
   - component: {fileID: 2322552651464511686}
+  - component: {fileID: 6443481543014510219}
   m_Layer: 0
   m_Name: rock_blue
   m_TagString: TriggerTag
@@ -75,6 +76,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &6443481543014510219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677433042209721815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5acb1ce6b344a4a429273991ca4a3e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  targetY: 100
 --- !u!1001 &605526929390793634
 PrefabInstance:
   m_ObjectHideFlags: 0
