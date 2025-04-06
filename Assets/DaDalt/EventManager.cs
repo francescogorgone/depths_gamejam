@@ -10,7 +10,7 @@ public class EventManager : MonoBehaviour
     public float air = 100f;
     public float maxAir = 100f;
 
-    public float drainSpeed = 0.2f;
+    public float drainSpeed = 0.02f;
 
     public bool GameOn = true;
 
