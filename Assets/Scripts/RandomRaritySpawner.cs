@@ -11,6 +11,9 @@ public class Spawner : MonoBehaviour
         public GameObject spawnObject;
         public float probability;
     }
+    [SerializeField] private BoxCollider wallLeftCollider;
+    [SerializeField] private BoxCollider wallRightCollider;
+    [SerializeField] private BoxCollider wallCenterCollider;
 
     [SerializeField] private List<SpawnObject> spawnObjects = new List<SpawnObject>();
     [SerializeField] private float spawnTime = 3.0f; // Tempo tra un spawn e l'altro
@@ -52,27 +55,33 @@ public class Spawner : MonoBehaviour
 
         if (lastSpawnTime > currentSpawnTimer)
         {
+            float spawnXleft = UnityEngine.Random.Range(wallLeftCollider.bounds.min.x, wallLeftCollider.bounds.max.x);
             // Posizione di spawn casuale
-            float spawnX;
-            if (UnityEngine.Random.value < 0.5f) // 50% di probabilità per ogni intervallo
-            {
-                spawnX = UnityEngine.Random.Range(-7.0f, -6.0f); // Intervallo negativo
-            }
-            else
-            {
-                spawnX = UnityEngine.Random.Range(7.0f, 8.0f); // Intervallo positivo
-            }
-            float spawnY = 0.6f;
-            float spawnZ;
-            if (UnityEngine.Random.value < 0.5f) // 50% di probabilità per ogni intervallo
-            {
-                spawnZ = UnityEngine.Random.Range(7.0f, 1.00f); // Intervallo negativo
-            }
-            else
-            {
-                spawnZ = UnityEngine.Random.Range(7.0f, 1.0f); // Intervallo positivo
-            }
-            Vector3 spawnPoint = new Vector3(spawnX, spawnY, spawnZ);
+            //float spawnX;
+
+            float spawnZleft = UnityEngine.Random.Range(wallLeftCollider.bounds.min.x, wallLeftCollider.bounds.max.x);
+            // Posizione di spawn casuale
+            //float spawnZ;
+
+            float spawnXright = UnityEngine.Random.Range(wallRightCollider.bounds.min.x, wallRightCollider.bounds.max.x);
+            // Posizione di spawn casuale
+            //float spawnX;
+
+            float spawnZright = UnityEngine.Random.Range(wallRightCollider.bounds.min.x, wallRightCollider.bounds.max.x);
+            // Posizione di spawn casuale
+            //float spawnZ;
+
+            float spawnXcenter = UnityEngine.Random.Range(wallCenterCollider.bounds.min.x, wallCenterCollider.bounds.max.x);
+            // Posizione di spawn casuale
+            //float spawnX;
+
+            float spawnZcenter = UnityEngine.Random.Range(wallCenterCollider.bounds.min.x, wallCenterCollider.bounds.max.x);
+            // Posizione di spawn casuale
+            //float spawnZ;
+           
+            Vector3 spawnPoint = new Vector3(spawnXleft, spawnY, spawnZleft);
+            Vector3 spawnPoint = new Vector3(spawnXright, spawnY, spawnZright);
+            Vector3 spawnPoint = new Vector3(spawnXcenter, spawnY, spawnZcenter);
 
             // Determina quale oggetto spawnare in base alla probabilità
             float spawnRandom = UnityEngine.Random.Range(0.0f, 1.0f); // 0.0f a 1.0f, non più 2.0f
