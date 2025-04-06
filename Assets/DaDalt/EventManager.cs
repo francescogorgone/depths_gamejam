@@ -68,6 +68,7 @@ public class EventManager : MonoBehaviour
             targetImage2.color = Color.Lerp(Color.yellow, Color.red, speed);
         }
         }
+
         
     }
     public void IncreaseAir(float value)
