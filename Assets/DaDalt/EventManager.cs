@@ -21,7 +21,7 @@ public class EventManager : MonoBehaviour
     public float speed = 0f;
     public float maxSpeed = 100f;
 
-    public int points = 10;
+    public int points = 0;
     public float weight = 30f;
     public Image targetImage2;
 
@@ -89,5 +89,11 @@ public class EventManager : MonoBehaviour
     public void IncreaseAir(float value)
     {
        air += value;
+    }
+
+    public void AddPoints(int value){
+        points +=value;
+        Debug.Log("Punti aggiunti: " + value);
+        Debug.Log("Punteggio totale: " + points);
     }
 }
