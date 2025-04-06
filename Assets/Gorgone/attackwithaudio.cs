@@ -20,16 +20,17 @@ public class xcv : MonoBehaviour
 
 
     public void OnMove(InputAction.CallbackContext context) {
+        /*Debug.Log("move");
         walking = true;
-        if(walking) {
+        if(walking) {*/
     isSprinting = context.started || context.performed;
         walk_sound.Play();
         mAnimator.SetBool("Running", isSprinting);
-        }
+       /* }
         else {
             walking = false;
             walk_sound.Stop();
-        }
+        }*/
          }
 
     public void OnAttack(InputAction.CallbackContext context) {
