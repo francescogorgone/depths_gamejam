@@ -62,18 +62,18 @@ public class EventManager : MonoBehaviour
                         }
 
                        if (air <= 0)
-                   {
+                       {
                             Debug.Log("Game Over");
                             GameOn = false;
                             SceneManager.LoadScene(1);
                        }
-                     if (air > maxAir)
+                        if (air >= maxAir)
                         {
                             air = maxAir;
                         }
 
 
-                        if (speed > maxSpeed)
+                        if (speed >= maxSpeed)
                         {
                             speed = maxSpeed;
                         }
@@ -86,7 +86,7 @@ public class EventManager : MonoBehaviour
              }
         
     }
-    public void IncreaseAir(float value)
+    public void AddOxygen(float value)
     {
        air += value;
     }

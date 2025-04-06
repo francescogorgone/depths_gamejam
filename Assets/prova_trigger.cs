@@ -4,8 +4,7 @@ public class TriggerScript : MonoBehaviour
 {   
     private EventManager eventManager; // Riferimento all'EventManager
     public int oreValue = 1;
-
-    public bool recoverOxygen = false;
+    public bool recoversOxygen = false;
 
     private  void Start(){
         eventManager = FindObjectOfType<EventManager>(); //trova l'EventManager
@@ -19,8 +18,10 @@ public class TriggerScript : MonoBehaviour
         // Aggiungi altre azioni qui (ad esempio, distruggere l'oggetto, fare qualcosa nella scena, ecc.)
 
 
-        // Aggiungi punti al punteggio del giocatore
-        eventManager.AddPoints(oreValue);
+        // Aggiungi punti o ossigeno al giocatore
+        if (recoversOxygen) 
+        {eventManager.AddOxygen(oreValue);}
+        else {eventManager.AddPoints(oreValue);}
 
 
         Destroy(gameObject);

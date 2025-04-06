@@ -3793,9 +3793,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AirSlider: {fileID: 1803433048}
-  air: 1
+  air: 100
   maxAir: 100
-  drainSpeed: 0.01
+  drainSpeed: 1
   GameOn: 1
   targetImage: {fileID: 1807240013}
   SpeedSlider: {fileID: 2024868289}
@@ -4075,6 +4075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c2964ce964d47048e03000c7b67981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSprinting: 0
   isHappy: 0
 --- !u!95 &2024240493
 Animator:
@@ -4367,6 +4368,14 @@ PrefabInstance:
     - target: {fileID: 3756832470659825985, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_Name
       value: AirSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641781175069633943, guid: 3a35215da54954849a8720a7a0834492, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641781175069633943, guid: 3a35215da54954849a8720a7a0834492, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7835602764891995181, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_AnchorMax.x
