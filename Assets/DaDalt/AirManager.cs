@@ -14,16 +14,6 @@ public class AirManager : MonoBehaviour
 
     public Image targetImage;
 
-
-    public Slider SpeedSlider;
-    public float speed = 0f;
-    public float maxSpeed = 100f;
-
-    public int points = 0;
-    public float weight = 30f;
-    public Image targetImage2;
-
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,8 +28,6 @@ public class AirManager : MonoBehaviour
         {
             
        AirSlider.value = air;
-       SpeedSlider.value = speed;
-       speed = points * points / weight;
 
         if (air > 0)
         {
@@ -55,17 +43,6 @@ public class AirManager : MonoBehaviour
         if (air > maxAir)
         {
             air = maxAir;
-        }
-
-
-        if (speed > maxSpeed)
-        {
-            speed = maxSpeed;
-        }
-
-        if (speed > 0)
-        {
-            targetImage2.color = Color.Lerp(Color.yellow, Color.red, speed / maxSpeed);
         }
         }
         
