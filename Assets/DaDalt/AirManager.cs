@@ -31,7 +31,7 @@ public class AirManager : MonoBehaviour
 
         if (air > 0)
         {
-            targetImage.color = Color.Lerp(Color.red, Color.green, air);
+            targetImage.color = Color.Lerp(Color.blue, Color.white, air / maxAir);
             air -= Time.deltaTime * drainSpeed;
         }
 
