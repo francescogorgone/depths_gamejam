@@ -3433,7 +3433,7 @@ MonoBehaviour:
   AirSlider: {fileID: 1803433048}
   air: 1
   maxAir: 100
-  drainSpeed: 0.05
+  drainSpeed: 0.5
   GameOn: 1
   targetImage: {fileID: 1807240013}
   SpeedSlider: {fileID: 2024868289}

@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Zanini/scene/PATAPIM.unity
     guid: 6f4e4c4a293c5124cb396fcc9e1a198f
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: a4a547e9c4686204d9e4adabb80a0925
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
