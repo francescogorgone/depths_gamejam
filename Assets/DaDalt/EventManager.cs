@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
+    private ChangeScene changeScene;
 
     public Slider AirSlider;
     public float air = 100f;
@@ -22,7 +24,10 @@ public class EventManager : MonoBehaviour
     public int points = 10;
     public float weight = 30f;
     public Image targetImage2;
-
+    private void Start()
+    {
+        changeScene = GetComponent<ChangeScene>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,6 +50,7 @@ public class EventManager : MonoBehaviour
         {
             Debug.Log("Game Over");
             GameOn = false;
+            SceneManager.LoadScene(1);
         }
         if (air > maxAir)
         {

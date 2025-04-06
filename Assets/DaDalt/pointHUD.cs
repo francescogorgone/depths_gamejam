@@ -12,8 +12,17 @@ public class pointHUD : MonoBehaviour
 
      int points = 1234567890;
     public GameObject EventManager;
+    //private eventManager pippo;
 
     public int score = 0;
+            private void Start()
+        {
+         
+        }
+          private void Update()
+        {
+            
+        }
 
 
    
