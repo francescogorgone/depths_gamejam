@@ -5,14 +5,12 @@ public class pointHUD : MonoBehaviour
 {
     [SerializeField] Text pointText;
 
-    GameObject gameObject = GameObject.Find("EventManager");
-    
+    int points;
 
     private void Awake (){
         UpdateHud();
     }
 
-    int points = GameObject.GetComponent<EventManager>().points;
 
     public int Points {
         get { return points; }
