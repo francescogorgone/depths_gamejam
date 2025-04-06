@@ -12,12 +12,15 @@ public class PointCheck : MonoBehaviour
         if (eventManager.points == 0) {
 
             if (showup) {
-                
+                Debug.Log("showup");
+                gameObject.SetActive(true);
             }
-
             else {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
+        }
+        else if (showup) {
+            gameObject.SetActive(false);
         }
     }
 }
