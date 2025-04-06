@@ -19,7 +19,7 @@ public class ObstacleController : MonoBehaviour
     {
 
         eventManager = FindFirstObjectByType<EventManager>();
-        playerControllerScripts = GameObject.Find("miner").GetComponent<PlayerController>();
+        playerControllerScripts = GameObject.Find("Miner3.0").GetComponent<PlayerController>();
 
          //accellerazione
     }

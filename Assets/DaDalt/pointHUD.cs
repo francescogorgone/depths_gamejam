@@ -6,7 +6,7 @@ public class pointHUD : MonoBehaviour
     [SerializeField] Text pointText;
     
     public int points2 = 1234567890;
-    public EventManager eventManager;
+    private EventManager eventManager;
 
 
     private void Start (){
@@ -27,6 +27,7 @@ public class pointHUD : MonoBehaviour
     }
 
     private void UpdateHud() {
+        points2 = eventManager.points;
         pointText.text = points2.ToString();
     }
 
