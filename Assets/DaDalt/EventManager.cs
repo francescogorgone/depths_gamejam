@@ -34,13 +34,6 @@ public class EventManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-    private void Start()
-    {
-        changeScene = GetComponent<ChangeScene>();
-
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -65,6 +58,7 @@ public class EventManager : MonoBehaviour
                        {
                             Debug.Log("Game Over");
                             GameOn = false;
+                            points = 0;
                             SceneManager.LoadScene(1);
                        }
                         if (air >= maxAir)
