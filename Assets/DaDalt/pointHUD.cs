@@ -5,12 +5,13 @@ public class pointHUD : MonoBehaviour
 {
     [SerializeField] Text pointText;
 
-
-    int points;
+    private int score;
 
     private void Awake (){
         UpdateHud();
     }
+
+
 
 
     public int Points {

@@ -20,6 +20,7 @@ public class EventManager : MonoBehaviour
     public float maxSpeed = 100f;
 
     public int points = 10;
+    private int pointsFixer = points;
     public float weight = 30f;
     public Image targetImage2;
 
@@ -67,6 +68,10 @@ public class EventManager : MonoBehaviour
         {
             targetImage2.color = Color.Lerp(Color.yellow, Color.red, speed);
         }
+
+        if (points != pointsFixer)
+        points = pointsFixer;
+        UpdatePoints(points);
         }
         
     }
