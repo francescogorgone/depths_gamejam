@@ -5,6 +5,7 @@ public class pointHUD : MonoBehaviour
 {
     [SerializeField] Text pointText;
 
+
     int points;
 
     private void Awake (){
