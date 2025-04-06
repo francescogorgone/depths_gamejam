@@ -4,13 +4,15 @@ using UnityEngine.UI;
 public class pointHUD : MonoBehaviour
 {
     [SerializeField] Text pointText;
+
+    GameObject gameObject = GameObject.Find("EventManager");
     
 
     private void Awake (){
         UpdateHud();
     }
 
-    int points = 1234567890;
+    int points = GameObject.GetComponent<EventManager>().points;
 
     public int Points {
         get { return points; }
