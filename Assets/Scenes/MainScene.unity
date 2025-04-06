@@ -2137,17 +2137,12 @@ MonoBehaviour:
   wallRightCollider: {fileID: 2011471517}
   wallCenterCollider: {fileID: 312778660}
   spawnObjects:
-<<<<<<< HEAD
   - spawnObject: {fileID: 0}
     probability: 50
   - spawnObject: {fileID: 0}
     probability: 50
-=======
-  - spawnObject: {fileID: 348588056}
-    probability: 100
->>>>>>> 4e4254d68e2ecd774239d81a40411722a206a6fa
   spawnTime: 3
-  spawnY: 100
+  spawnY: 0
 --- !u!4 &2052058710
 Transform:
   m_ObjectHideFlags: 0
@@ -2386,9 +2381,4 @@ SceneRoots:
   - {fileID: 2011471520}
   - {fileID: 312778663}
   - {fileID: 2052058710}
-<<<<<<< HEAD
   - {fileID: 230656274}
-=======
-  - {fileID: 348588055}
-  - {fileID: 1331797901}
->>>>>>> 4e4254d68e2ecd774239d81a40411722a206a6fa
