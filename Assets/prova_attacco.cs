@@ -13,7 +13,7 @@ public class PlayerAttackScript : MonoBehaviour
     void Update()
     {
         // Controlla se il giocatore preme il tasto "Spazio" per attaccare
-        if (Input.GetKeyDown(KeyCode.Space))  // Usa il tasto "Spazio" per attaccare
+        if (Input.GetMouseButtonDown(0))  // Usa il tasto "Spazio" per attaccare
         {
             Attacco();
         }
