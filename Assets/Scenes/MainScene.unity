@@ -724,7 +724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e15a7f7351470f93a7dd91122253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedObject: 2
   leftBound: 15
   uplimit: {fileID: 1625118103}
   spawnPoint: {fileID: 405762076}
@@ -2115,7 +2114,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3495,7 +3494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e15a7f7351470f93a7dd91122253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedObject: 2
   leftBound: 15
   uplimit: {fileID: 1625118103}
   spawnPoint: {fileID: 405762076}
@@ -4698,7 +4696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1e15a7f7351470f93a7dd91122253e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedObject: 2
   leftBound: 15
   uplimit: {fileID: 1625118103}
   spawnPoint: {fileID: 405762076}
