@@ -10,7 +10,7 @@ public class PlayerAttackScript : MonoBehaviour
     public float offsetAttacco = 2f;  // Distanza dall'oggetto per posizionare il centro dell'attacco davanti al giocatore
     public float altezzaAttacco = 1f;  // Distanza sopra il giocatore per la posizione Y dell'area di attacco
     private AudioSource audioSource; // AudioSource per riprodurre il suono
-
+    public AudioClip Audio; //Variabile audio visibile dall'inspector
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -43,9 +43,9 @@ public class PlayerAttackScript : MonoBehaviour
                     trigger.AttivaFunzione();  // Chiama la funzione del trigger
                 }
             }
-             if (audioSource != null && soundClip != null)
+             if (audioSource != null)
             {
-                audioSource.PlayOneShot(soundClip);  // Riproduce il suono una volta
+                audioSource.PlayOneShot(Audio);  // Riproduce il suono una volta
             }
         }
     }
