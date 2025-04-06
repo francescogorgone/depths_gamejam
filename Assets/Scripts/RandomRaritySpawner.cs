@@ -21,30 +21,11 @@ public class Spawner : MonoBehaviour
 
     private float lastSpawnTime;
     private float currentSpawnTimer;
-    private float[] probabilities;
     public float spawnY=0.0f;  
 
     // Start is called before the first frame update
     void Start()
     {
-        // Calcola le probabilità cumulative normalizzate
-        probabilities = new float[spawnObjects.Count];
-        float totalProbability = 0.0f;
-
-        // Calcola la somma totale delle probabilità
-        foreach (var spawnObj in spawnObjects)
-        {
-            totalProbability += spawnObj.probability;
-        }
-
-        // Normalizza le probabilità per farle sommare a 1
-        float current_probability = 0.0f;
-        for (int i = 0; i < spawnObjects.Count; ++i)
-        {
-            current_probability += spawnObjects[i].probability / totalProbability;  // Normalizza
-            probabilities[i] = current_probability;
-        }
-
         lastSpawnTime = 0;
         currentSpawnTimer = spawnTime;
     }
@@ -65,43 +46,38 @@ public class Spawner : MonoBehaviour
             switch (zone)
             {
                 case 0: // Wall Left
+                float xOffset = wallLeftCollider.transform.position.x;
+                float zOffset = wallLeftCollider.transform.position.z;
                     float spawnXleft = UnityEngine.Random.Range(wallLeftCollider.bounds.min.x, wallLeftCollider.bounds.max.x);
                     float spawnZleft = UnityEngine.Random.Range(wallLeftCollider.bounds.min.z, wallLeftCollider.bounds.max.z);
-                    spawnPoint = new Vector3(spawnXleft, spawnY, spawnZleft);
+                    spawnPoint = new Vector3(spawnXleft, 0, spawnZleft);
                     break;
 
                 case 1: // Wall Right
-                    float spawnXright = UnityEngine.Random.Range(wallRightCollider.bounds.min.x, wallRightCollider.bounds.max.x);
-                    float spawnZright = UnityEngine.Random.Range(wallRightCollider.bounds.min.z, wallRightCollider.bounds.max.z);
-                    spawnPoint = new Vector3(spawnXright, spawnY, spawnZright); 
+                    float spawnXright = wallRightCollider.transform.position.x+UnityEngine.Random.Range(wallRightCollider.bounds.min.x, wallRightCollider.bounds.max.x);
+                    float spawnZright = wallRightCollider.transform.position.z+UnityEngine.Random.Range(wallRightCollider.bounds.min.z, wallRightCollider.bounds.max.z);
+                    spawnPoint = new Vector3(spawnXright, 0, spawnZright); 
                     break;
 
                 case 2: // Wall Center
-                    float spawnXcenter = UnityEngine.Random.Range(wallCenterCollider.bounds.min.x, wallCenterCollider.bounds.max.x);
-                    float spawnZcenter = UnityEngine.Random.Range(wallCenterCollider.bounds.min.z, wallCenterCollider.bounds.max.z);
-                    spawnPoint = new Vector3(spawnXcenter, spawnY, spawnZcenter); 
+                    float spawnXcenter = wallCenterCollider.transform.position.x+ UnityEngine.Random.Range(wallCenterCollider.bounds.min.x, wallCenterCollider.bounds.max.x);
+                    float spawnZcenter = wallCenterCollider.transform.position.z+UnityEngine.Random.Range(wallCenterCollider.bounds.min.z, wallCenterCollider.bounds.max.z);
+                    spawnPoint = new Vector3(spawnXcenter, 0, spawnZcenter);
                     break;
             }
-
             // Determina quale oggetto spawnare in base alla probabilità
-            float spawnRandom = UnityEngine.Random.Range(0.0f, 1.0f); // 0.0f a 1.0f
-
+            float spawnRandom = UnityEngine.Random.Range(0,100); // 0.0f a 1.0f
             int index = 0;
-            while (index < probabilities.Length && spawnRandom > probabilities[index])
-            {
-                ++index;
+            if(spawnRandom<spawnObjects[0].probability){
+                index = 0;
+            }else if (spawnRandom<spawnObjects[1].probability){
+                index = 1;
+            }else{
+                index = 2;
             }
 
-            if (index < probabilities.Length)
-            {
-                // Istanzia l'oggetto selezionato
-                GameObject newObject = Instantiate(spawnObjects[index].spawnObject);
-                newObject.transform.position = spawnPoint;
-            }
-            else
-            {
-                Debug.Log("Spawner: Probability out of range");
-            }
+            GameObject newObject = Instantiate(spawnObjects[index].spawnObject.gameObject, spawnPoint, Quaternion.identity);
+            newObject.transform.position = spawnPoint;
 
             // Reset del timer di spawn
             lastSpawnTime = 0;
