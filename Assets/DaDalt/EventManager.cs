@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AirManager : MonoBehaviour
+public class EventManager : MonoBehaviour
 {
 
     public Slider AirSlider;
