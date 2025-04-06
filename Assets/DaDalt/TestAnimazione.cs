@@ -4,7 +4,7 @@ public class TestAnimazione : MonoBehaviour
 {
 
     private Animator mAnimator;
-
+    private bool isSprinting;
 
     void Start()
     {
@@ -27,9 +27,10 @@ public class TestAnimazione : MonoBehaviour
         }
     }
 
-    public void OJMove(InputAction.CallbackContext context) {
-    
-        
-        
-    }
+    public void OnMove(InputAction.CallbackContext context) {
+        isSprinting = context.started || context.performed;
+        mAnimator.SetBool("Running", isSprinting);
+         }
+
 }
+
