@@ -10,7 +10,13 @@ public class pointHUD : MonoBehaviour
         UpdateHud();
     }
 
-    int points = 1234567890;
+     int points = 1234567890;
+    public GameObject EventManager;
+
+    public int score = 0;
+
+
+   
 
     public int Points {
         get { return points; }
