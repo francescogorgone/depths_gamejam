@@ -5,10 +5,12 @@ public class TestAnimazione : MonoBehaviour
 
     private Animator mAnimator;
     private bool isSprinting;
+    public bool isHappy;
 
     void Start()
     {
         mAnimator = GetComponent<Animator>();
+            mAnimator.SetBool("Victory", isHappy);
         
     }
 
