@@ -65,7 +65,6 @@ public class Spawner : MonoBehaviour
                     spawnPoint = new Vector3(spawnXcenter, 0, spawnZcenter);
                     break;
             }
-            Debug.Log("Spawn Position: "+spawnPoint);
             // Determina quale oggetto spawnare in base alla probabilità
             float spawnRandom = UnityEngine.Random.Range(0,100); // 0.0f a 1.0f
             int index = 0;
