@@ -3808,6 +3808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d888395e92f3b4bafbed5da81067ffa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showup: 0
   eventManager: {fileID: 0}
 --- !u!1 &700126152
 GameObject:
@@ -12343,6 +12344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d888395e92f3b4bafbed5da81067ffa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showup: 0
   eventManager: {fileID: 0}
 --- !u!1001 &1881798522
 PrefabInstance:
