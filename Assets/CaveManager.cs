@@ -48,9 +48,10 @@ public class CaveGenerator : MonoBehaviour
     
     void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(new Vector3(0, debugSegment, 0), 5);
-        Gizmos.color=Color.red;
+        //Gizmos.DrawSphere(new Vector3(0, debugSegment, 0), 5);
+        //Gizmos.color=Color.red;
         Gizmos.DrawSphere(new Vector3(0, deubgCamera, 0), 5);
+        Gizmos.color=Color.blue;
     }
     void RecycleSegment(GameObject segment)
     {
