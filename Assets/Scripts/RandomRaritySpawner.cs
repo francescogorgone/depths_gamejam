@@ -56,21 +56,21 @@ public class Spawner : MonoBehaviour
             float spawnX;
             if (UnityEngine.Random.value < 0.5f) // 50% di probabilità per ogni intervallo
             {
-                spawnX = UnityEngine.Random.Range(-20.0f, -15.0f); // Intervallo negativo
+                spawnX = UnityEngine.Random.Range(-7.0f, -6.0f); // Intervallo negativo
             }
             else
             {
-                spawnX = UnityEngine.Random.Range(-10.0f, -5.0f); // Intervallo positivo
+                spawnX = UnityEngine.Random.Range(7.0f, 8.0f); // Intervallo positivo
             }
-            float spawnY = 0.98f;
+            float spawnY = 0.6f;
             float spawnZ;
             if (UnityEngine.Random.value < 0.5f) // 50% di probabilità per ogni intervallo
             {
-                spawnZ = UnityEngine.Random.Range(10.0f, 15.0f); // Intervallo negativo
+                spawnZ = UnityEngine.Random.Range(7.0f, 1.00f); // Intervallo negativo
             }
             else
             {
-                spawnZ = UnityEngine.Random.Range(20.0f, 25.0f); // Intervallo positivo
+                spawnZ = UnityEngine.Random.Range(7.0f, 1.0f); // Intervallo positivo
             }
             Vector3 spawnPoint = new Vector3(spawnX, spawnY, spawnZ);
 
