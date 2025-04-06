@@ -5,6 +5,8 @@ public class TriggerScript : MonoBehaviour
     private EventManager eventManager; // Riferimento all'EventManager
     public int oreValue = 1;
 
+    public bool recoverOxygen = false;
+
     private  void Start(){
         eventManager = FindObjectOfType<EventManager>(); //trova l'EventManager
     }
