@@ -1545,11 +1545,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5, y: 5, z: 6.1232336e-17}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1777472976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 677433042209721815, guid: 156f64928760242d4ad87b1b8d461546, type: 3}
-  m_PrefabInstance: {fileID: 1379703921}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2003682906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,11 +1676,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003682906}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2054011289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7725141608537226701, guid: 4e0381fa7baba42a4bc12b66f47db736, type: 3}
-  m_PrefabInstance: {fileID: 501320426}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2054011290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3498900393021582313, guid: 4e0381fa7baba42a4bc12b66f47db736, type: 3}
@@ -1743,13 +1733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
-  caveSegments:
-  - {fileID: 3655000510165428278}
-  - {fileID: 6422668318195231708}
-  - {fileID: 183890458}
-  - {fileID: 1590299879}
-  - {fileID: 2054011289}
-  - {fileID: 1777472976}
+  caveSegments: []
 --- !u!23 &1007901671416291871
 MeshRenderer:
   m_ObjectHideFlags: 0

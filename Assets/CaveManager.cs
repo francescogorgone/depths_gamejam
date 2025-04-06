@@ -34,13 +34,24 @@ public class CaveGenerator : MonoBehaviour
 
         foreach (GameObject segment in caveSegments)
         {
-            if (segment.transform.position.y - segmentHeight / 2 > cameraTransform.position.y + Camera.main.orthographicSize)
+            debugSegment = segment.transform.position.y - segmentHeight / 2;
+            deubgCamera = cameraTransform.position.y + Camera.main.orthographicSize;
+            if (debugSegment> deubgCamera)
             {
                 RecycleSegment(segment);
             }
         }
     }
-
+    
+    float debugSegment;
+    float deubgCamera;
+    
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(new Vector3(0, debugSegment, 0), 5);
+        Gizmos.color=Color.red;
+        Gizmos.DrawSphere(new Vector3(0, deubgCamera, 0), 5);
+    }
     void RecycleSegment(GameObject segment)
     {
         float lowestY = float.MaxValue;
