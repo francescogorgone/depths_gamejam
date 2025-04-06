@@ -27,7 +27,9 @@ public class TestAnimazione : MonoBehaviour
         }
     }
 
-    public void Move(InputAction value) {
-        mAnimator.SetBool("Running", true);
-        }
+    public void OJMove(InputAction.CallbackContext context) {
+    
+        
+        
+    }
 }
