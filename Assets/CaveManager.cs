@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class CaveGenerator : MonoBehaviour
 {
-    public float scrollSpeed = 2f;
+    private EventManager eventManager; //manager velocità
+
+    public float scrollSpeed = 0f;
+
+     public float baseScrollSpeed = 1f;
     public List<GameObject> caveSegments;
 
     private float segmentHeight;
@@ -11,6 +15,9 @@ public class CaveGenerator : MonoBehaviour
 
     void Start()
     {
+        eventManager = FindObjectOfType<EventManager>(); //manager velocità
+
+
         if (caveSegments == null || caveSegments.Count == 0)
         {
             Debug.LogError("Nessun segmento assegnato!");
@@ -30,6 +37,8 @@ public class CaveGenerator : MonoBehaviour
 
     void Update()
     {
+        scrollSpeed = baseScrollSpeed * eventManager.speed;
+
         transform.position += Vector3.up * scrollSpeed * Time.deltaTime;
 
         foreach (GameObject segment in caveSegments)

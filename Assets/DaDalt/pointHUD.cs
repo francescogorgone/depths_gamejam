@@ -10,7 +10,7 @@ public class pointHUD : MonoBehaviour
 
 
     private void Start (){
-        eventManager = FindObjectOfType<EventManager>();
+        eventManager = FindFirstObjectByType<EventManager>();
         if (eventManager == null) {
             Debug.LogError("EventManager not found in the scene.");
         }
