@@ -4,6 +4,8 @@ public class PlayerAttackScript : MonoBehaviour
 {
     public float raggioAttacco = 1f;  // Raggio dell'area di attacco
     public LayerMask layerTrigger;  // Il layer del trigger che deve essere attivato
+    public Vector3 sizeAttacco = new Vector3(1f, 1f, 1f);
+    private Vector3 centroAttacco;
 
     void Update()
     {
@@ -15,9 +17,10 @@ public class PlayerAttackScript : MonoBehaviour
     }
 
     void Attacco()
-    {
+    {   
+        centroAttacco= new Vector3(transform.position.x,transform.position.y+2,transform.position.z-1);
         // Crea una sfera intorno al giocatore per simulare un'area di attacco
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, raggioAttacco, layerTrigger);
+        Collider[] hitColliders = Physics.OverlapBox(centroAttacco, sizeAttacco, transform.rotation, layerTrigger);
 
         foreach (var hitCollider in hitColliders)
         {
@@ -36,7 +39,11 @@ public class PlayerAttackScript : MonoBehaviour
     // Funzione per visualizzare il raggio di attacco (solo per debug)
     private void OnDrawGizmos()
     {
+        Vector3 gizmoCentroAttacco = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 1);
+    
+        // Applica la rotazione del personaggio a Gizmos
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, raggioAttacco);
+        Gizmos.matrix = Matrix4x4.TRS(gizmoCentroAttacco, transform.rotation, Vector3.one);
+        Gizmos.DrawWireCube(centroAttacco, sizeAttacco);
     }
 }
