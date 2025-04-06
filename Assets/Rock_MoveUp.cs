@@ -5,8 +5,8 @@ public class MoveAndDestroy : MonoBehaviour
 
     private EventManager eventManager; //accellerazione
 
-    private float baseSpeed = 3f;  // Velocità di salita lungo l'asse Y
-     private float Speed = 0f;
+    private float baseSpeed = 1f;  // Velocità di salita lungo l'asse Y
+    private float Speed = 0f;
     public float targetY = 100f;  // Altezza target raggiunta la quale l'oggetto viene distrutto
 
     void Start(){
@@ -15,7 +15,7 @@ public class MoveAndDestroy : MonoBehaviour
 
     void Update()
     {
-        Speed = baseSpeed + 20 * eventManager.speed;
+        Speed = baseSpeed + 40 * eventManager.speed;
 
         // Muovi l'oggetto lungo l'asse Y
         transform.Translate(Vector3.up * Speed * Time.deltaTime);

@@ -8,8 +8,8 @@ public class ObstacleController : MonoBehaviour
 {
     private EventManager eventManager; //accellerazione
     
-    public float baseSpeedObject = 1f;
-    public float speedObject = 1f;
+    private float baseSpeedObject = 1f;
+    private float speedObject = 0f;
     public float leftBound = 15.0f;
     private PlayerController playerControllerScripts;
     public Transform uplimit;
@@ -27,7 +27,7 @@ public class ObstacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedObject = baseSpeedObject/10 + 20 * eventManager.speed;
+        speedObject = baseSpeedObject + 40 * eventManager.speed;
         
         transform.Translate(Vector3.up* Time.deltaTime * speedObject);
         if (transform.position.y >= uplimit.position.y){
