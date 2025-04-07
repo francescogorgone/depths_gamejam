@@ -49,9 +49,14 @@ public class EventManager : MonoBehaviour
                        speed = points / weight;
 
                         if (air > 0)
-                     {
-                            targetImage.color = Color.Lerp(Color.cyan, Color.white, air);
+                        {
+                             if (air <= 20) {
+                                targetImage.color = Color.Lerp(Color.red, Color.cyan, air/maxAir);
+                            }
+                            else {targetImage.color = Color.Lerp(Color.yellow, Color.white, air/maxAir);}
+
                             air -= Time.deltaTime * drainSpeed;
+                           
                         }
 
                        if (air <= 0)

@@ -6,7 +6,7 @@ public class MoveUp : MonoBehaviour
     private float moveSpeed = 1f;
 
     private void Start(){
-        eventManager = FindObjectOfType<EventManager>();
+        eventManager = FindFirstObjectByType<EventManager>();
 
     }
 

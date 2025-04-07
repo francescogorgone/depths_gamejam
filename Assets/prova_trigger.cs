@@ -7,7 +7,7 @@ public class TriggerScript : MonoBehaviour
     public bool recoversOxygen = false;
 
     private  void Start(){
-        eventManager = FindObjectOfType<EventManager>(); //trova l'EventManager
+        eventManager = FindFirstObjectByType<EventManager>(); //trova l'EventManager
     }
 
     // Questa funzione viene chiamata quando il giocatore entra in contatto con il trigger

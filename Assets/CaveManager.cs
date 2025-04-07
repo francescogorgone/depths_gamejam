@@ -15,7 +15,7 @@ public class CaveGenerator : MonoBehaviour
 
     void Start()
     {
-        eventManager = FindObjectOfType<EventManager>(); //manager velocità
+        eventManager = FindFirstObjectByType<EventManager>(); //manager velocità
 
 
         if (caveSegments == null || caveSegments.Count == 0)
