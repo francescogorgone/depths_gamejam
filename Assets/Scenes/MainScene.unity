@@ -5855,7 +5855,7 @@ MonoBehaviour:
   sizeAttacco: {x: 1.39, y: 2.09, z: 2.13}
   offsetAttacco: 1.18
   altezzaAttacco: 1.9
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 3ef197860f6ae4c46ada65fe19fb9b19, type: 3}
 --- !u!82 &2024240500
 AudioSource:
   m_ObjectHideFlags: 0
