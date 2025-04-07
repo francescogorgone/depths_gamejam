@@ -5,7 +5,7 @@ public class MoveAndDestroy : MonoBehaviour
 
     private EventManager eventManager; //accellerazione
 
-    private float baseSpeed = 1.5f;  // Velocità di salita lungo l'asse Y
+    private float baseSpeed = 2f;  // Velocità di salita lungo l'asse Y
     private float Speed = 0f;
     public float targetY = 100f;  // Altezza target raggiunta la quale l'oggetto viene distrutto
 

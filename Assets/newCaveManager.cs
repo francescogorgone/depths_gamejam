@@ -8,7 +8,7 @@ public class ObstacleController : MonoBehaviour
 {
     private EventManager eventManager; //accellerazione
     
-    private float baseSpeedObject = 1.5f;
+    private float baseSpeedObject = 2f;
     private float speedObject = 0f;
     public float leftBound = 15.0f;
     private PlayerController playerControllerScripts;
