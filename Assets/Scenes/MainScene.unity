@@ -4690,8 +4690,8 @@ MonoBehaviour:
   layerTrigger:
     serializedVersion: 2
     m_Bits: 4294967295
-  sizeAttacco: {x: 1, y: 2, z: 4}
-  offsetAttacco: 2
+  sizeAttacco: {x: 1, y: 2, z: 1.75}
+  offsetAttacco: 1.69
   altezzaAttacco: 1
   Audio: {fileID: 0}
 --- !u!224 &2024868288 stripped
