@@ -70,9 +70,19 @@ public class EventManager : MonoBehaviour
                         if (air > 0)
                         {
                              if (air <= 20) {
-                                targetImage.color = Color.Lerp(Color.red, Color.cyan, air/maxAir);
+                                targetImage.color = Color.Lerp(Color.red, Color.white, air/maxAir);
+                                //DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.low_oxygen);
                             }
-                            else {targetImage.color = Color.Lerp(Color.yellow, Color.white, air/maxAir);}
+                            else if (air <=50){
+                                targetImage.color = Color.Lerp(Color.red, Color.yellow, air/maxAir);
+                                //DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.normal_oxygen);
+                            }
+
+                            else {
+                                targetImage.color = Color.Lerp(Color.yellow, Color.green, air/maxAir);
+                            //DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.high_oxygen);
+                            }
+
 
                             air -= Time.deltaTime * drainSpeed;
                            
