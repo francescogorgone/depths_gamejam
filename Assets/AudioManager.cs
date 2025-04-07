@@ -26,6 +26,7 @@ public class DeepAudioManager : MonoBehaviour
 
     void Start()
     {
+        source=GetComponent<AudioSource>();
         currentMusic = BackgroundMusic.None;
         PlayMusic(BackgroundMusic.high_oxygen);
     }
@@ -38,6 +39,8 @@ public class DeepAudioManager : MonoBehaviour
         switch (music)
         {
             case BackgroundMusic.high_oxygen:
+                        Debug.Log(source==null);
+
             source.clip =game_120;
             source.loop = true;
             source.Play();
