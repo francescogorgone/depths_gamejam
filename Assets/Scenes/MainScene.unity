@@ -626,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 312778659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.17, y: -32.24, z: 7.1}
+  m_LocalPosition: {x: -0.2, y: -32.24, z: 7.1}
   m_LocalScale: {x: -0.1, y: 95.6, z: 10.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1537,8 +1537,8 @@ Transform:
   m_GameObject: {fileID: 562898443}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.28626588, z: -0, w: 0.95815027}
-  m_LocalPosition: {x: 7.85, y: -32.24, z: 3.73}
-  m_LocalScale: {x: -0.1, y: 95.6, z: 8.2}
+  m_LocalPosition: {x: 6.6, y: -32.24, z: 5}
+  m_LocalScale: {x: -0.1, y: 95.6, z: 7.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4050,8 +4050,8 @@ Transform:
   m_GameObject: {fileID: 2011471516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.28626543, z: 0, w: 0.9581504}
-  m_LocalPosition: {x: -8.18, y: -32.24, z: 3.73}
-  m_LocalScale: {x: -0.1, y: 95.6, z: 8.2}
+  m_LocalPosition: {x: -6.9, y: -32.24, z: 4.8}
+  m_LocalScale: {x: -0.1, y: 95.6, z: 7.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4494,7 +4494,7 @@ GameObject:
   - component: {fileID: 2052058710}
   - component: {fileID: 2052058709}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Rock_Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4521,7 +4521,7 @@ MonoBehaviour:
   - spawnObject: {fileID: 8330628771224170197, guid: 373583883cf2f42bebbd97c8b49b38c7, type: 3}
     probability: 50
   spawnTime: 3
-  spawnY: 0
+  spawnY: -2
 --- !u!4 &2052058710
 Transform:
   m_ObjectHideFlags: 0

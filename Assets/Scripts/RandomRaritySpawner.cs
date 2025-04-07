@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
     private float lastSpawnTime;
     private float currentSpawnTimer;
     private float[] probabilities;
-    public float spawnY=0.0f;  
+    public float spawnY=-1.0f;  
 
     // Start is called before the first frame update
     void Start()

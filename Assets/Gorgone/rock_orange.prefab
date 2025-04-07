@@ -75,6 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de565664acb49b4cb0db921a2b8381f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oreValue: 1
+  recoversOxygen: 0
 --- !u!114 &1716161240827013897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acb1ce6b344a4a429273991ca4a3e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  targetY: 100
+  targetY: 80
 --- !u!1001 &1329279261658606742
 PrefabInstance:
   m_ObjectHideFlags: 0
