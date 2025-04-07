@@ -6,7 +6,7 @@ public class EventManager : MonoBehaviour
 {
     private ChangeScene changeScene;
 
-    public Slider AirSlider;
+    public Slider airSlider;
     public float air = 100f;
     public float maxAir = 100f;
 
@@ -17,7 +17,7 @@ public class EventManager : MonoBehaviour
     public Image targetImage;
 
 
-    public Slider SpeedSlider;
+    public Slider speedSlider;
     public float speed = 0f;
     public float maxSpeed = 100f;
 
@@ -40,6 +40,8 @@ public class EventManager : MonoBehaviour
         }
 
         void Start(){
+            airSlider = GameObject.Find("AirSlider").GetComponent<Slider>();
+            speedSlider = GameObject.Find("SpeedSlider").GetComponent<Slider>();
         }
 
     // Update is called once per frame
@@ -47,13 +49,13 @@ public class EventManager : MonoBehaviour
     {
        
        if (GameOn){
-            if ((AirSlider == null) || (SpeedSlider == null)){
+            if ((airSlider == null) || (speedSlider == null)){
                  
             }
              else {
             
-                     AirSlider.value = air;
-                      SpeedSlider.value = speed;
+                     airSlider.value = air;
+                      speedSlider.value = speed;
                        
                        if(points <= maxSpeed){
                        
