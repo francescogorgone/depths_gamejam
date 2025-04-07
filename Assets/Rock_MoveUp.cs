@@ -15,7 +15,7 @@ public class MoveAndDestroy : MonoBehaviour
 
     void Update()
     {
-        Speed = baseSpeed + 40 * eventManager.speed;
+        Speed = baseSpeed + 20 * eventManager.speed;
 
         // Muovi l'oggetto lungo l'asse Y
         transform.Translate(Vector3.up * Speed * Time.deltaTime);

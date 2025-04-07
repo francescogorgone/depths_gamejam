@@ -27,7 +27,7 @@ public class ObstacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speedObject = baseSpeedObject + 40 * eventManager.speed;
+        speedObject = baseSpeedObject + 20 * eventManager.speed;
         
         transform.Translate(Vector3.up* Time.deltaTime * speedObject);
         if (transform.position.y >= uplimit.position.y){
