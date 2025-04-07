@@ -4882,9 +4882,11 @@ MonoBehaviour:
   wallCenterCollider: {fileID: 312778660}
   spawnObjects:
   - spawnObject: {fileID: 677433042209721815, guid: 156f64928760242d4ad87b1b8d461546, type: 3}
-    probability: 50
+    probability: 30
   - spawnObject: {fileID: 8330628771224170197, guid: 373583883cf2f42bebbd97c8b49b38c7, type: 3}
-    probability: 50
+    probability: 35
+  - spawnObject: {fileID: 7725141608537226701, guid: 4e0381fa7baba42a4bc12b66f47db736, type: 3}
+    probability: 35
   spawnTime: 2.5
   spawnY: -15
 --- !u!4 &2052058710
