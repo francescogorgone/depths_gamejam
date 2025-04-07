@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private BoxCollider wallCenterCollider;
 
     [SerializeField] private List<SpawnObject> spawnObjects = new List<SpawnObject>();
-    [SerializeField] private float spawnTime = 3.0f; // Tempo tra un spawn e l'altro
+    [SerializeField] private float spawnTime = 0.1f; // Tempo tra un spawn e l'altro
 
     private EventManager eventManager; //raggiungi EventManager per calcolare la spawnrate
 
@@ -111,7 +111,7 @@ public class Spawner : MonoBehaviour
 
             // Reset del timer di spawn
             lastSpawnTime = 0;
-            currentSpawnTimer = spawnTime - 3 * eventManager.speed; // Calcola il tempo di spawn in base alla velocità
+            currentSpawnTimer = spawnTime - 0.8f * eventManager.speed; // Calcola il tempo di spawn in base alla velocità
         }
     }
 }
