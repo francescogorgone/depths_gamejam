@@ -4147,7 +4147,7 @@ MonoBehaviour:
   airSlider: {fileID: 0}
   air: 100
   maxAir: 100
-  drainSpeed: 1
+  drainSpeed: 2
   targetImage: {fileID: 1807240013}
   speedSlider: {fileID: 0}
   speed: 0
@@ -4885,7 +4885,7 @@ MonoBehaviour:
     probability: 50
   - spawnObject: {fileID: 8330628771224170197, guid: 373583883cf2f42bebbd97c8b49b38c7, type: 3}
     probability: 50
-  spawnTime: 0.3
+  spawnTime: 2.5
   spawnY: -15
 --- !u!4 &2052058710
 Transform:
