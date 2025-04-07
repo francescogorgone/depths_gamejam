@@ -20,12 +20,9 @@ public class ChangeScene : MonoBehaviour
     {
         if (numeroscena == 5)
             {
-                SceneManager.LoadScene(numeroscena);
+                updatePoints.points = 0;
             }
-
-        else {
-            updatePoints.points = 0;
         SceneManager.LoadScene(numeroscena);
-        }
+
     }
 }

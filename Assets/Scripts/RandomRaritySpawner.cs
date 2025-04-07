@@ -19,6 +19,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] private List<SpawnObject> spawnObjects = new List<SpawnObject>();
     [SerializeField] private float spawnTime = 3.0f; // Tempo tra un spawn e l'altro
 
+    private EventManager eventManager; //raggiungi EventManager per calcolare la spawnrate
+
+
     private float lastSpawnTime;
     private float currentSpawnTimer;
     private float[] probabilities;
@@ -26,7 +29,10 @@ public class Spawner : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        //trova l'EventManager (calcolo frequenza)
+        eventManager= FindFirstObjectByType<EventManager>();
+
         // Calcola le probabilità cumulative normalizzate
         probabilities = new float[spawnObjects.Count];
         float totalProbability = 0.0f;
@@ -105,7 +111,7 @@ public class Spawner : MonoBehaviour
 
             // Reset del timer di spawn
             lastSpawnTime = 0;
-            currentSpawnTimer = spawnTime;
+            currentSpawnTimer = spawnTime - 3 * eventManager.speed; // Calcola il tempo di spawn in base alla velocità
         }
     }
 }

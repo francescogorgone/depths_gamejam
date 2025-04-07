@@ -30,8 +30,17 @@ public class EventManager : MonoBehaviour
         public static EventManager Instance;
 
         void Awake(){
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad (this);
+		
+	if (Instance == null) {
+		Instance = this;
+	} else {
+		Destroy(gameObject);
+	}
+        }
+
+        void Start(){
+            test = FindFirstObjectByType<AirSlider>();
         }
 
     // Update is called once per frame
@@ -46,7 +55,11 @@ public class EventManager : MonoBehaviour
             
                      AirSlider.value = air;
                       SpeedSlider.value = speed;
+                       
+                       if(points <= maxSpeed){
+                       
                        speed = points / weight;
+                        }
 
                         if (air > 0)
                         {
@@ -66,13 +79,13 @@ public class EventManager : MonoBehaviour
                             points = 0;
                             SceneManager.LoadScene(1);
                        }
-                        if (air >= maxAir)
+                        if (air > maxAir)
                         {
                             air = maxAir;
                         }
 
 
-                        if (speed >= maxSpeed)
+                        if (speed > maxSpeed)
                         {
                             speed = maxSpeed;
                         }
