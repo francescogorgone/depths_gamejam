@@ -66,8 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de565664acb49b4cb0db921a2b8381f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oreValue: 1
-  recoversOxygen: 0
+  oreValue: 3
+  recoversOxygen: 1
 --- !u!65 &-4659033433130090186
 BoxCollider:
   m_ObjectHideFlags: 0

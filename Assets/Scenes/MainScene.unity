@@ -4586,13 +4586,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2024240491}
-        m_TargetAssemblyTypeName: TestAnimazione, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 2024240499}
+        m_TargetAssemblyTypeName: PlayerAttackScript, Assembly-CSharp
+        m_MethodName: Attacco
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4900,9 +4900,9 @@ MonoBehaviour:
   - spawnObject: {fileID: 677433042209721815, guid: 156f64928760242d4ad87b1b8d461546, type: 3}
     probability: 30
   - spawnObject: {fileID: 8330628771224170197, guid: 373583883cf2f42bebbd97c8b49b38c7, type: 3}
-    probability: 35
+    probability: 40
   - spawnObject: {fileID: 7725141608537226701, guid: 4e0381fa7baba42a4bc12b66f47db736, type: 3}
-    probability: 35
+    probability: 30
   spawnTime: 2.5
   spawnY: -15
 --- !u!4 &2052058710
