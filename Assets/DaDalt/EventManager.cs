@@ -12,8 +12,6 @@ public class EventManager : MonoBehaviour
 
     public float drainSpeed = 10f;
 
-    public bool GameOn = true;
-
     public Image targetImage;
 
 
@@ -24,6 +22,11 @@ public class EventManager : MonoBehaviour
     public int points = 0;
     public float weight = 30f;
     public Image targetImage2;
+
+    public bool GameOn = true;
+
+
+    public bool restart = false;
 
 
         //Oggetto permanente
@@ -39,9 +42,11 @@ public class EventManager : MonoBehaviour
 	}
         }
 
-        void Start(){
+    void Start(){
             airSlider = GameObject.Find("AirSlider").GetComponent<Slider>();
             speedSlider = GameObject.Find("SpeedSlider").GetComponent<Slider>();
+            targetImage = GameObject.Find("AirFill").GetComponent<Image>();
+            targetImage2 = GameObject.Find("SpeedFill").GetComponent<Image>();
         }
 
     // Update is called once per frame
@@ -108,5 +113,14 @@ public class EventManager : MonoBehaviour
         points +=value;
         Debug.Log("Punti aggiunti: " + value);
         Debug.Log("Punteggio totale: " + points);
+    }
+
+    public void Restart(){
+        airSlider = GameObject.Find("AirSlider").GetComponent<Slider>();
+        speedSlider = GameObject.Find("SpeedSlider").GetComponent<Slider>();
+        targetImage = GameObject.Find("AirFill").GetComponent<Image>();
+        targetImage2 = GameObject.Find("SpeedFill").GetComponent<Image>();
+        points = 0;
+        air = 100;
     }
 }
