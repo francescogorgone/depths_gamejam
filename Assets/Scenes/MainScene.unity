@@ -1456,14 +1456,14 @@ RectTransform:
   m_GameObject: {fileID: 416771598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalScale: {x: 1.08, y: 1.08, z: 1.08}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1522154221}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -77, y: -82}
+  m_AnchoredPosition: {x: -77.5, y: -81.77}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416771600
@@ -4765,7 +4765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8320034936238323621, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 60.099976
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 8320034936238323621, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_SizeDelta.y
@@ -4914,6 +4914,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 4.100006
       objectReference: {fileID: 0}
+    - target: {fileID: 7835602764891995181, guid: 3a35215da54954849a8720a7a0834492, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8320034936238323621, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4940,7 +4944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8320034936238323621, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90.5
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 8320034936238323621, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5005,6 +5009,10 @@ PrefabInstance:
     - target: {fileID: 8754311789578826973, guid: 3a35215da54954849a8720a7a0834492, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.60998535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8754311789578826973, guid: 3a35215da54954849a8720a7a0834492, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7645735479366846848, guid: 3a35215da54954849a8720a7a0834492, type: 3}
