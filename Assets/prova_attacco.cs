@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 public class PlayerAttackScript : MonoBehaviour
 {
     public float raggioAttacco = 1f;  // Raggio dell'area di attacco
@@ -18,13 +19,20 @@ public class PlayerAttackScript : MonoBehaviour
     void Update()
     {
         // Controlla se il giocatore preme il tasto "Spazio" per attaccare
-        if (Input.GetKeyDown(KeyCode.Space))  // Usa il tasto "Spazio" per attaccare
-        {
-            Attacco();
+        //if (Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") > 0.1f)  // Usa il tasto "Spazio" per attaccare
+        //{
+        //    Attacco();
+        //}
+    }
+
+    void OnAttack(InputAction.CallbackContext cont){
+        if(cont.performed){
+             Debug.LogWarning("Lol");
+             Attacco();
         }
     }
 
-    void Attacco()
+    public void Attacco()
     {
         // Calcola il centro dell'attacco davanti al giocatore, con un offset in Y (altezzaAttacco)
         centroAttacco = transform.position + transform.forward * offsetAttacco + Vector3.up * altezzaAttacco;
