@@ -111,7 +111,7 @@ public class Spawner : MonoBehaviour
 
             // Reset del timer di spawn
             lastSpawnTime = 0;
-            currentSpawnTimer = spawnTime - 3 * eventManager.speed; // Calcola il tempo di spawn in base alla velocità
+            currentSpawnTimer = spawnTime - 2.5f * eventManager.speed; // Calcola il tempo di spawn in base alla velocità
         }
     }
 }
