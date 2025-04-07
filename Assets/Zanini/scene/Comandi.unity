@@ -4153,7 +4153,8 @@ MonoBehaviour:
   m_text: 'EXTRACT AS MANY MINERALS AS YOU CAN BEFORE THE OXYGEN RUNS OUT.
 
     INCREASE
-    YOUR OXYGEN WITH THE TANKS YOU FIND WHILE PLAYING.'
+    YOUR OXYGEN MINING THE BLUE MINERALS AND GET POINTs MINING THE ORANGE ONES YOU
+    FIND WHILE PLAYING.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26d4faf54e9c57d41943e33c7cb44f92, type: 2}
   m_sharedMaterial: {fileID: -81262982618815160, guid: 26d4faf54e9c57d41943e33c7cb44f92, type: 2}
@@ -4180,7 +4181,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.9
+  m_fontSize: 59.05
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
