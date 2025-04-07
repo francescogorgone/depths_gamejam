@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: BACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26d4faf54e9c57d41943e33c7cb44f92, type: 2}
   m_sharedMaterial: {fileID: -81262982618815160, guid: 26d4faf54e9c57d41943e33c7cb44f92, type: 2}
@@ -4205,7 +4205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.2, y: 24.7}
+  m_AnchoredPosition: {x: 18.7, y: 24.7}
   m_SizeDelta: {x: 580.6, y: 413.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140785436
@@ -4231,8 +4231,8 @@ MonoBehaviour:
   m_text: 'EXTRACT AS MANY MINERALS AS YOU CAN BEFORE THE OXYGEN RUNS OUT.
 
     INCREASE
-    YOUR OXYGEN MINING THE BLUE MINERALS AND GET POINTs MINING THE ORANGE ONES YOU
-    FIND WHILE PLAYING.'
+    YOUR OXYGEN MINING THE BLUE MINERALS AND GET POINTs MINING THE ORANGE ONES. MAKE
+    SURE TO PRESS "EJECT" OR YOU WILL END UP BEING STUCKED INSIDE THE CAVE.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26d4faf54e9c57d41943e33c7cb44f92, type: 2}
   m_sharedMaterial: {fileID: -81262982618815160, guid: 26d4faf54e9c57d41943e33c7cb44f92, type: 2}
@@ -4259,14 +4259,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.05
+  m_fontSize: 52.4
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 16
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 3
@@ -6289,7 +6289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.1, y: -324.5}
+  m_AnchoredPosition: {x: 3.6, y: -324.5}
   m_SizeDelta: {x: 180, y: 100.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802870696
