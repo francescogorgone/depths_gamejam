@@ -46,7 +46,7 @@ public class PlayerAttackScript : MonoBehaviour
                     trigger.AttivaFunzione();  // Chiama la funzione del trigger
                 }
             }
-             if (audioSource != null)
+             if (audioSource != null && !audioSource.isPlaying)
             {
                 audioSource.PlayOneShot(Audio);  // Riproduce il suono una volta
             }

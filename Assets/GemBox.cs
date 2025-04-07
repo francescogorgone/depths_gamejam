@@ -17,7 +17,7 @@ public class GemBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (eventManager.points >= scoreNeeded)
+        if (eventManager.points <= scoreNeeded)
         {
           GetComponent<MeshRenderer>().enabled = false;
         }
