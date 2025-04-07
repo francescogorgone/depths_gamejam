@@ -6,6 +6,8 @@ public class GemBox : MonoBehaviour
 
     private EventManager eventManager;
 
+    public int scoreNeeded;
+
     void Start()
     {
         eventManager = FindFirstObjectByType<EventManager>();

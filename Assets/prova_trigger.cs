@@ -3,7 +3,7 @@ using UnityEngine;
 public class TriggerScript : MonoBehaviour
 {   
     private EventManager eventManager; // Riferimento all'EventManager
-    public int oreValue = 1;
+    public int oreValue;
     public bool recoversOxygen = false;
 
     private  void Start(){
