@@ -40,7 +40,6 @@ public class EventManager : MonoBehaviour
         }
 
         void Start(){
-            test = FindFirstObjectByType<AirSlider>();
         }
 
     // Update is called once per frame
