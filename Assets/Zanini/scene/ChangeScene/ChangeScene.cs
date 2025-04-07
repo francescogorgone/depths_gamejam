@@ -21,7 +21,6 @@ public class ChangeScene : MonoBehaviour
     {
         if (numeroscena == 5)
             {
-
                 
             }
         SceneManager.LoadScene(numeroscena);
