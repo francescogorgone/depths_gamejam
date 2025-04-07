@@ -71,16 +71,16 @@ public class EventManager : MonoBehaviour
                         {
                              if (air <= 20) {
                                 targetImage.color = Color.Lerp(Color.red, Color.white, air/maxAir);
-                                //DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.low_oxygen);
+                                DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.low_oxygen);
                             }
                             else if (air <=50){
                                 targetImage.color = Color.Lerp(Color.red, Color.yellow, air/maxAir);
-                                //DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.normal_oxygen);
+                                DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.normal_oxygen);
                             }
 
                             else {
                                 targetImage.color = Color.Lerp(Color.yellow, Color.green, air/maxAir);
-                            //DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.high_oxygen);
+                            DeepAudioManager.Instance.PlayMusic(DeepAudioManager.BackgroundMusic.high_oxygen);
                             }
 
 
@@ -91,7 +91,6 @@ public class EventManager : MonoBehaviour
                        if (air <= 0)
                        {
                             Debug.Log("Game Over");
-                            GameOn = false;
                             points = 0;
                             SceneManager.LoadScene(1);
                        }
