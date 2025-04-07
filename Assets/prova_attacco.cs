@@ -18,11 +18,6 @@ public class PlayerAttackScript : MonoBehaviour
     }
     void Update()
     {
-        // Controlla se il giocatore preme il tasto "Spazio" per attaccare
-        //if (Input.GetKeyDown(KeyCode.Space) || Input.GetAxis("Fire1") > 0.1f)  // Usa il tasto "Spazio" per attaccare
-        //{
-        //    Attacco();
-        //}
     }
 
     void OnAttack(InputAction.CallbackContext cont){
