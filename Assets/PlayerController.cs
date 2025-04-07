@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private int maxNumberOfJumps = 2;
     [SerializeField] private float gravityMultiplier = 1.7f;
 
+private AudioSource walkingsound;
     private int numberOfJumps;
 
     private Vector2 input;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour {
     private void Awake() {
         characterController = GetComponent<CharacterController>();
         mainCamera = Camera.main;
+        walkingsound = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -72,6 +74,13 @@ public class PlayerController : MonoBehaviour {
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
 
         characterController.Move(currentSpeed * Time.deltaTime * direction);
+        if (direction.magnitude <= 0.01){
+            walkingsound.Pause();
+        }
+        else if (!walkingsound.isPlaying){
+            walkingsound.Play();
+        }
+        
     }
 
     public void Move(InputAction.CallbackContext context) {
